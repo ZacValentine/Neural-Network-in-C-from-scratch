@@ -11,7 +11,6 @@
 #include <math.h>
 #include <time.h>
 
-// void writeToCSV(const char *filename, double loss);
 
 void print2dDoubleArray(double** array, int numRows, int numCols);
 
