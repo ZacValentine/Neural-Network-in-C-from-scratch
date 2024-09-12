@@ -10,18 +10,6 @@
 
 #include "functions.h"
 
-// I COPIED THIS FUNCTION
-// void writeToCSV(const char *filename, double loss) {
-//     FILE *fp = fopen(filename, "a");
-//     fseek(fp, 0, SEEK_END);
-//     if (ftell(fp) == 0) {
-//         fprintf(fp, "loss\n");
-//     }
-
-//     fprintf(fp, "%lf\n", loss);
-//     fclose(fp);
-// }
-
 // efficient
 void print2dDoubleArray(double** array, int numRows, int numCols){
     printf("[");
