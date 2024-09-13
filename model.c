@@ -139,7 +139,6 @@ int main(){
                 }
             }
             // how much does weightsOutput affect biasOutput through matAdd(weightsOutput, bias1)... * dbiasOuptut = how much it affects the loss
-            // some of these can be replaced with matmul or other operations
             for (int i = 0; i < weightsOutputNumRows; i++){
                 for (int j = 0; j < weightsOutputNumCols; j++){
                     dweightsOutput[i][j] = 1 * dbiasOutput[i][j];
@@ -149,8 +148,7 @@ int main(){
             // matmul 768, 1 * 1, 10
             dweights1 = matmul(transpose(input, inputNumRows, inputNumCols), dweightsOutput, inputNumCols, inputNumRows, weightsOutputNumRows, weightsOutputNumCols);
 
-            // printAll(), //printGradients()
-            // // print gradients here
+            // print gradients here
 
             // optimization(add gradients * learningRate to weights and biases)
             // weights1 
@@ -176,7 +174,6 @@ int main(){
 
             // validation here
             //save to visualization file here
-            // writeToCSV(filename, loss);
         }
     }
     return 0;
